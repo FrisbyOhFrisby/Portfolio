@@ -1,6 +1,9 @@
-%~~~~~~ LifeTrends CV Set Up ~~~~~~
 %~~~~~~ CV/Resume Set Up ~~~~~~
+% * <laurenfrisby@utexas.edu> 2018-08-04T03:19:40.175Z:
+%
+% ^.
 \documentclass[11pt,a4paper,cambria]{moderncv}
+\usepackage{tikz, graphicx}
 \moderncvstyle{casual} 
 \moderncvcolor{orange} 
 \usepackage{tabularx}
@@ -12,15 +15,14 @@
 
 
 %~~~~~~ Name/Contact/Definitions ~~~~~~
-\firstname{L.A. }
+\firstname{Lauren A. }
 \familyname{Frisby}
-\title{Data Scientist}
-\address{2501 Pearl Street, Apartment 103}{Austin, TX 78705}
+\title{}
+\address{12345 Alameda Trace Circle, Apt. 121}{Austin, TX 78727}
 \mobile{(+1) 903-245-4862}
 \email{LaurenFrisby@utexas.edu}
-\photo[70pt][0.4pt]{PersonalPhoto.jpg}
-
-\quote{\textbf{\textcolor{Aigre}{{\small"Time for you and time for me, and time yet for a hundred indecisions and for a hundred visions and revisions before the taking of a toast and tea"-T.S. Eliot}}}}
+\photo[50pt][0.9pt]{download.png}
+\quote{\textbf{\textcolor{Aigre}{{"Lauren is very detailed and highly motivated"- Fred Tann, C.P.A.}}}}
 
 %~~~~~~ Document ~~~~~~
 \begin{document}
@@ -28,116 +30,133 @@
 
 %~~~~~ Education ~~~~~~
 \section*{\textbf{Education}}
-\cventry{May 2016}{Bachelor of Science in Mathematics}
-{University of Texas at Austin}{Austin}{Mathematical Sciences: Specialization in Statistics, Probability and Data Analysis}{Senior: currently completing last six hours to meet required 128 hours.}
-\subsection*{\textbf{Last Remaining \& Currently Enrolled Courses}}
-\renewcommand{\listitemsymbol}{-~}
-\begin{multicols}{2}
-\cvitem{}{\small Cultural Anthropology}
-\cvitem{}{\small Human Sexuality}
-\end{multicols}
+\cventry{December 2017}{Bachelor of Science Mathematics}
+{University of Texas at Austin}{}{\newline Mathematical Sciences: Statistics, Probability and Data Analysis (Major: E 65600)}{}
 
-%~~~~~ Project ~~~~~~
-\section*{\textbf{Project}}
-\cventry{March 2016}{Design and Trial of Mechanistic Mathematical Model for the Enzymatic Production and Use of L-DOPA and Tyrosine.}{}{}{}{Developing a system to track the enzymatic kinetics over time such as Dopamine and Serotonin.\\
-This project builds a mechanistic model for the field of Neuroscience.}
+%~~~~~ Research & Upcoming Publications ~~~~~~
+\section*{\textbf{Research \& Upcoming Publications}}
+\cventry{May 2016}{Design and Trial of a Mechanistic Mathematical Model for the Enzymatic Production and Consumption of L-DOPA and Tyrosine}{}{}{}{}
 
-%~~~~~~ Skills Section ~~~~~
-\section*{\textbf{Additional Skills: \small\textit{Relevant, Familiar Software \& Programming Languages}}}
+%~~~~~~ Additional Skills ~~~~~
+\section*{\textbf{Additional Skills: \small\textit{Some Familiar Softwares \& Programming Languages}}}
 \renewcommand{\listitemsymbol}{-~}
 \setlength{\columnsep}{1pt}
+%~~~~~ 1st Row ~~~~~
 \begin{multicols}{3}
-\cvitem {}
-{\includegraphics[width=1cm,height=1cm]{Matlab}}
-\cvitem {}{\includegraphics[width=1cm,height=1cm]{CLogo}}
-\cvitem {}{\includegraphics[width=1cm,height=1cm]{HCLogo}}
+%Matlab
+\cvitemwithcomment
+{\includegraphics[width=1cm,height=1cm]{Matlab}}{ Matlab}{}
+%C++
+\cvitemwithcomment {\includegraphics[width=1cm,height=1cm]{CLogo}}{C \& C++}{}
+%HTML&CSS
+\cvitemwithcomment{\includegraphics[width=1cm,height=1cm]{HCLogo}}{HTML \& CSS}{}
 \end{multicols}
-
+%~~~~~ 2nd Row ~~~~~
 \begin{multicols}{3}
-\cvitem {}
-{\includegraphics[width=1cm,height=1cm]{LatexLogo}}
-\cvitem {}{\includegraphics[width=1cm,height=1cm]{GithubLogo}}
-\cvitem {}{\includegraphics[width=1cm,height=1cm]{ExcelLogo}}
-\end{multicols}
-
-\begin{multicols}{3}
-\cvlistitem{\textbf{Matlab}}
-\cvlistitem{\textbf{C++}}
-\cvlistitem{\textbf{CSS \& HTML}}
-\end{multicols}
-
-\begin{multicols}{3}
-\cvlistitem{\textbf{LaTeX}}
-\cvlistitem{\textbf{Github}}
-\cvlistitem{\textbf{Excel}}
+%Latex
+\cvitemwithcomment
+{\includegraphics[width=1cm,height=1cm]{LatexLogo}}{LaTeX}{}
+%Linux
+\cvitemwithcomment{\includegraphics[width=1.5cm,height=1cm]{Linux.jpg}}{Linux}{}
+%Github
+\cvitemwithcomment
+{\includegraphics[width=1cm,height=1cm]{ExcelLogo.png}}{Excel}{}
 \end{multicols}
 
 %~~~~~~~ Currently Learning ~~~~~~
-\section{\textbf{Currently Learning}}
+\section*{\textbf{Currently Learning}}
 \renewcommand{\listitemsymbol}{-~}
- \begin{multicols}{3}
- \cvlistitem{R}
- \cvlistitem{SQL}
- \cvlistitem{Swift}
- \end{multicols}
+%~~~~~~ 1st Row ~~~~~
+ \begin{multicols}{4}
+ %LogicProX
+\cvitemwithcomment{\includegraphics[width=1cm,height=1cm]{LogicProLogo.jpg}}{Logic Pro X}{}
+ %AutoCAD
+\cvitemwithcomment{\includegraphics[width=1cm,height=1cm]{AutoCADLogo.jpg}}{AutoCAD}{}
+ %Fedora
+\cvitemwithcomment{\includegraphics[width=1cm,height=1cm]{Fedora.png}}{Fedora}{}
+%R
+\cvitemwithcomment{\includegraphics[width=1cm,height=1cm]{RIcon.png}}{R}{}
+\end{multicols}
 
 %~~~~~~ Personal Skills ~~~~~~
-\newpage
-\section*{Personal Skills}
+\section*{\textbf{Personal Skills}}
 \renewcommand{\listitemsymbol}{-~}
 \setlength{\columnsep}{1pt}
+%~~~~~ 1st Row ~~~~~
 \begin{multicols}{3}
-\cvlistitem{Exponentially Quick Learner.}
-\cvlistitem{Creative Problem Solver.}
-\cvlistitem{Artistic.}
+\cvlistitem{Exponentially Quick Learner}
+\cvlistitem{Creative Problem Solver}
+\cvlistitem{Artistic}
+\end{multicols}
+%~~~~~ 2nd Row ~~~~~
+\begin{multicols}{3}
+\cvlistitem{Driven}
+\cvlistitem{Compassionate}
+\cvlistitem{Inspiring}
 \end{multicols}
 
+%~~~~~~ Areas of Interest ~~~~~
+\section*{\textbf{Areas of Interest}}
+\renewcommand{\listitemsymbol}{-~}
 \begin{multicols}{3}
-\cvlistitem{Relentless.}
-\cvlistitem{Passionate.}
-\cvlistitem{Inspiring.}
+\cvitem{}{\small Mathematical Modeling}
+\cvitem{}{\small Design}
+\cvitem{}{\small Data Science}
 \end{multicols}
-
-%~~~~~~ Area of Interest ~~~~~
-\section*{Area of Interest}
-\cvlistitem{Mathematical Modeling}
 
 %~~~~~~ Extra Curricular Activities ~~~~~
-\section*{Extra-Curricular Activities}
-\cventry{March 2016}{Research}{Research Team Lead}{Developing a system to track the enzymatic kinetics products through several systems of O.D.E's. Molarity over time provides levels of Dopamine and Serotonin at time t. This project builds a mechanistic model for the field of Neuroscience.}{}{}
-\cventry{April 2016}{Competed in Casualty Actuarial Society's Case Study, CAS }{Competition Team Lead}{Date: 28th March - 2nd April 2016}{}{}
+\section*{\textbf{Extra-Curricular Activities}}
+\cventry{March 2016 - Current}{Research}{Research Team Lead}{Our team is developing a scaled, mechanistic-mathematical model tracking the production and consumption of dopamine and serotonin over time throughout the human body and brain for the purpose of Neuroscience; Particularly analyzing the relation between Parkinson's Disease and the amount of dopamine within the Nigrostriatal Pathway}{}{}
+\cventry{}{Volunteer Art Contributor}{Artist}{Provide artistic services such as large scale murals, oil paintings, cover art, and interior design consultations for small businesses, start-ups and charitable organizations}{Currently approved by Jacksonville City Council to re-vamp Nichols Green Park\& Painting 'Super Sno' a food truck within the city of Jacksonville \textit{The Jacksonville Volunteers}}{}
+\cventry{May-July 2017}{Professional Volunteer Swim Instructor}{Instructor}{Provided professional swim lessons for children ranging 1.5 years to 16 years of age}{}{}
+\cventry{April 2016}{Competed in Casualty Actuarial Society's (CAS) first Case Study at the University of Texas at Austin, CAS }{Competition Team Lead}{Date: 28th March - 2nd April 2016}{}{}
 \cventry{2012-2013}{APA Volunteer}{Volunteer}{assistant veterinary technician in Austin Pets Alive Parvo-Virus Ward}{}{}{}
 
+
 %~~~~~~ Languages ~~~~~~
-\section*{Languages}
+\section*{\textbf{Languages}}
 \cvitemwithcomment{English}{Native Language}{}
 \cvitemwithcomment{French}{Intermediate}{Conversationally fluent}
-\cvitemwithcomment{Mandarin}{Beginner}{Can understand 300 characters}
+\cvitemwithcomment{Mandarin}{Beginner}{Can Read, Write, and Utilize 300 simplifed script characters}
 
-%~~~~~~ Interests ~~~~~~
-\section*{Interests}
+%~~~~~~ Interests ~~~~~~d
+\section*{\textbf{Interests}}
 \renewcommand{\listitemsymbol}{-~}
-\cvlistdoubleitem{Street Art}{Oil Painting}
-\cvlistdoubleitem{Live Role Play Costume Creation}{Making Music}
-\cvlistdoubleitem{Swimming}{Dancing}
-\cvlistdoubleitem{Jam Roller Skating}{Design \& Light Construction Work}
+\cvlistdoubleitem{Aerial Yoga}{Painting}
+\cvlistdoubleitem{Swimming}{Interior Design}
 
 %~~~~~~ Personal Information ~~~~~~
-\section{Personal Details}
+\section*{\textbf{Personal Details}}
 \cvitem{DOB}{25th of April, 1988}
-\cvitem{Address}{United States of America, Texas, Austin-78705, 2501 Pearl Street Apt.103}
-\cvitem{Languages}{English}
+\cvitem{Address}{12345 Alameda Trace Circle Apt. 121, Austin Texas, 78727}
 \cvitem{Mobile No.}{+1 903-245-4862}
+\cvitem{Linkedin}{https://www.linkedin.com/in/frisbyohfrisby/}
+\cvitem{GitHub}{https://github.com/FrisbyOhFrisby}
+
+%~~~~~~ References ~~~~~~
+\section*{\textbf{References}}
+%~~~~~ 1st Row ~~~~~
+\begin{multicols}{2}
+\cvlistitem{Jennifer K. Mann Austin, PhD}
+\cvlistitem{(+1) 512-522-9375}
+\end{multicols}
+%~~~~~~ 2nd Row ~~~~~~
+\begin{multicols}{2}
+\cvlistitem{Bill Wolesensky}
+\cvlistitem{(+1) 512-232-6194}
+\end{multicols}
 
 %~~~~~~ Declaration With Signature~~~~~~
-\section{Declaration}
+\section*{\textbf{Declaration}}
 \cvitem{}{The above information is correct to my knowledge and I bear full responsibility for the accuracy of this document.}
-\cvitem{}{Date: November 15th 2016}
-\cvitem{}{Place: Austin}
-
+\cvitem{}{Date: August 3, 2018}
+\cvitem{}{Place: Austin Texas}
 	\begin{multicols}{2}
-     \cvitem{}{\huge{L. A. Frisby}}
-     \cvitem{}{\includegraphics[width=6cm,height=1.5cm]{SignatureLaurenFrisby}}
+     \cvitem{}{\huge{Lauren A. Frisby}}
+     \cvitem{}{\includegraphics[width=5.5cm,height=1.5cm,trim=4.5cm 4.5cm -7cm -10.50cm]{SignatureLaurenFrisby}}
+% * <laurenfrisby@utexas.edu> 2017-08-05T08:33:18.475Z:
+%
+% ^.
      \end{multicols}
      
 %~~~~~~ Fin ~~~~~~

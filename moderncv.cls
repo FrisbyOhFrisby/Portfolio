@@ -1,26 +1,22 @@
 %% start of file `moderncv.cls'.
 %% Copyright 2006-2012 Xavier Danaux (xdanaux@gmail.com).
 %
-% This work may be distributed and/or modified under the
-% conditions of the LaTeX Project Public License version 1.3c,
-% available at http://www.latex-project.org/lppl/.
-
-
-%-------------------------------------------------------------------------------
-%                identification
-%-------------------------------------------------------------------------------
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%    Modified by: L.A. Frisby
+%
+%~~~~~~ identification ~~~~~~
+%              
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{moderncv}[2012/10/31 v1.2.0 modern curriculum vitae and letter document class]
 
-
-%-------------------------------------------------------------------------------
-%                class options
+% ~~~~~~ class options ~~~~~~
 %
 % (need to be done before the external package loading, for example because
 % we need \paperwidth, \paperheight and \@ptsize to be defined before loading
 % geometry and fancyhdr)
-%-------------------------------------------------------------------------------
-% paper size option
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%~~~~~~ paper size option ~~~~~~
 \DeclareOption{a4paper}{
   \setlength\paperheight{297mm}
   \setlength\paperwidth{210mm}}
@@ -44,31 +40,29 @@
   \setlength\paperheight{\paperwidth}
   \setlength\paperwidth{\@tempdima}}
 
-% font size options
+%~~~~~~ font size options ~~~~~~
 \newcommand\@ptsize{}
 \DeclareOption{10pt}{\renewcommand\@ptsize{0}}
 \DeclareOption{11pt}{\renewcommand\@ptsize{1}}
 \DeclareOption{12pt}{\renewcommand\@ptsize{2}}
 
-% font type options
+%~~~~~~ font type options ~~~~~~
 \DeclareOption{sans}{\AtBeginDocument{\renewcommand{\familydefault}{\sfdefault}}}
 \DeclareOption{roman}{\AtBeginDocument{\renewcommand{\familydefault}{\rmdefault}}}
 
-% draft/final option
+%~~~~~~ draft/final option ~~~~~~
 \DeclareOption{draft}{\setlength\overfullrule{5pt}}
 \DeclareOption{final}{\setlength\overfullrule{0pt}}
 
-% execute default options
+%~~~~~~ execute default options ~~~~~~
 \ExecuteOptions{a4paper,11pt,final}
 
-% process given options
+%~~~~~~ process given options ~~~~~~
 \ProcessOptions\relax
 \input{size1\@ptsize.clo}
 
-
-%-------------------------------------------------------------------------------
-%                required packages
-%-------------------------------------------------------------------------------
+%~~~~~~ required packages ~~~~~~
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 % \AtEndPreamble hook (loading etoolbox instead of defining the macro, as to avoid incompatibilities with etoolbox (and packages relying on it) defining the macro too)
 \RequirePackage{etoolbox}
 %\let\@endpreamblehook\@empty
@@ -178,10 +172,8 @@
 % compatibility package with older versions of moderncv
 \RequirePackageWithOptions{moderncvcompatibility}
 
-
-%-------------------------------------------------------------------------------
-%                class definition
-%-------------------------------------------------------------------------------
+%~~~~~~  class definition ~~~~~~
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 % minimal base settings
 \setlength\lineskip{1\p@}
 \setlength\normallineskip{1\p@}
@@ -203,10 +195,8 @@
 \raggedbottom
 \onecolumn
 
-
-%-------------------------------------------------------------------------------
-%                overall design commands definitions
-%-------------------------------------------------------------------------------
+%~~~~~~  overall design commands definitions ~~~~~~
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 % elements
 \newcommand*{\firstname}[1]{\def\@firstname{#1}}
 \newcommand*{\familyname}[1]{\def\@familyname{#1}}
@@ -218,13 +208,13 @@
 \newcommand*{\email}[1]{\def\@email{#1}}
 \newcommand*{\homepage}[2]{\def\@homepage{#1}\def\@homepagetitle{#2}}
 
-% colors
+%~~~~~~ colors ~~~~~~
 \definecolor{color0}{rgb}{0,0,0}% main default color, normally left to black
 \definecolor{color1}{rgb}{0,0,0}% primary theme color
 \definecolor{color2}{rgb}{0,0,0}% secondary theme color
 \definecolor{color3}{rgb}{0,0,0}% tertiary theme color
 
-% symbols
+%~~~~~~ symbols ~~~~~~
 %   itemize labels (the struts were added to correct inter-item spacing (works for single line items, until a solution is found for multi-line ones...)
 \newcommand*{\labelitemi}{\strut\textcolor{color1}{\marvosymbol{123}}}% equivalent to \Neutral from marvosym package; alternative: \fontencoding{U}\fontfamily{ding}\selectfont\tiny\symbol{'102}
 \newcommand*{\labelitemii}{\strut\textcolor{color1}{\large\bfseries-}}
@@ -244,14 +234,14 @@
 \newcommand*{\emailsymbol}{}
 \newcommand*{\homepagesymbol}{}
 
-% fonts
+%~~~~~~ fonts ~~~~~~
 \AtBeginDocument{\normalfont\color{color0}}
 
-% strings for internationalisation
+%~~~~~~ strings for internationalisation ~~~~~~
 \newcommand*{\refname}{Publications}
 \newcommand*{\enclname}{Enclosure}
 
-% makes the footer (normally used both for the resume and the letter)
+%~~~~~~ makes the footer (normally used both for the resume and the letter)
 % usage: \makefooter
 \newcommand*{\makefooter}{}%
 
@@ -272,9 +262,9 @@
   \ifdefined#1\else\newlength{#1}\fi}
 
 
-%-------------------------------------------------------------------------------
-%                resume design commands definitions
-%-------------------------------------------------------------------------------
+
+%~~~~~~ resume design commands definitions ~~~~~~
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 % elements
 \newcommand*{\extrainfo}[1]{\def\@extrainfo{#1}}
 \newcommandx*{\photo}[3][1=64pt,2=0.4pt,usedefault]{\def\@photowidth{#1}\def\@photoframewidth{#2}\def\@photo{#3}}% the 1st (optional) argument is the width of the photo, the 2nd (optional) argument is the thickness of the frame around it.
@@ -435,9 +425,9 @@
 %  \parbox[#1]{\widthofautobox{#2}}{#2}}
 
 
-%-------------------------------------------------------------------------------
+%------------------------------------------------------------
 %                letter design commands definitions
-%-------------------------------------------------------------------------------
+%------------------------------------------------------------
 % elements
 \newcommand*{\recipient}[2]{\def\@recipientname{#1}\def\@recipientaddress{#2}}
 \renewcommand*{\date}[1]{\def\@date{#1}}\date{\today}
@@ -466,5 +456,8 @@
 
 \endinput
 
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
 
 %% end of file `moderncv.cls'.
